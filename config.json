@@ -1,0 +1,40 @@
+{
+  "project_name": "Sentiment-Analysis",
+  "data": {
+    "raw_path": "/home/belal/projects/Sentiment-Analysis/data/raw/IMDB Dataset.csv",
+    "processed_dir": "/home/belal/projects/Sentiment-Analysis/data/processed",
+    "min_freq": 5,
+    "max_length": 256
+  },
+  "lstm": {
+    "model_path": "/home/belal/projects/Sentiment-Analysis/models/sentiment_lstm_model.pth",
+    "batch_size": 64,
+    "embed_dim": 100,
+    "hidden_dim": 256,
+    "output_dim": 1,
+    "n_layers": 2,
+    "bidirectional": true,
+    "dropout": 0.5,
+    "learning_rate": 0.001,
+    "epochs": 10
+  },
+  "scratch_transformer": {
+    "model_path": "/home/belal/projects/Sentiment-Analysis/models/scratch_transformer_model.pth",
+    "batch_size": 16,
+    "embed_dim": 128,
+    "n_head": 4,
+    "ff_dim": 512,
+    "output_dim": 1,
+    "n_layers": 2,
+    "dropout": 0.5,
+    "learning_rate": 0.0005,
+    "epochs": 15
+  },
+  "bert": {
+    "model_path": "/home/belal/projects/Sentiment-Analysis/models/sentiment_BERT_transformer_model.pth",
+    "batch_size": 16,
+    "dropout": 0.3,
+    "learning_rate": 2e-5,
+    "epochs": 3
+  }
+}
